@@ -1,0 +1,21 @@
+<h1>Angular Login Page</h1>
+<form [formGroup]="lgnFrm"  (ngSubmit)="login()">
+<div class="login">
+    <label for="fullName">Username:</label>
+<input for ="text"  id="userName" formControlName="userName">
+<br> <br>
+
+    <label for="pwd" name="pwd">Password:</label>
+    <input type ="password" name="pwdtxt" id="password" formControlName="pwd">
+    <br><br>
+
+
+    <button type="submit" name="log" id="log"[disabled]="!lgnFrm.valid">  Login</button>
+</div>
+<p *ngIf= "userInvalid">
+    <span style="color:red;"> Invalid user, Please provide the correct values </span>
+</p>
+
+
+</form>
+

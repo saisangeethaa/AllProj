@@ -1,0 +1,24 @@
+
+ <table>
+<tr>
+<th> Emp ID</th>
+<th> Full Name</th>
+<th> Data of Joining</th>
+<th> Address</th>
+<th> Contact</th>
+<th> Email </th>
+</tr>
+<tr *ngFor="let lst of tblDtls">
+
+<td>{{lst.empID}}</td>
+<td>{{lst.fullName}}</td>
+<td>{{lst.doj}}</td>
+<td>{{lst.address}}</td>
+<td> {{lst.cnt}}</td>
+<td>{{lst.email}}</td>
+<!---<td> <button (click)="delEmp(lst.empID)"> Delete </button></td>--->
+
+</tr>
+</table>
+<button (click)="incrementCount()"> Increment Counter  </button>
+<p>{{counter}}</p>
